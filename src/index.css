@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-main-bg: #f6f5fa;
+    --color-main-black: #2a2c36;
+    --color-main-green: #74b200;
+    --color-main-gray: #898b94;
+    --color-additional-gray: #636570;
+    --color-form-bg: #fff;
+    --color-checkbox-select: #7b61ff;
+  }
+  .dark {
+    --color-main-bg: #303030;
+    --color-main-black: #ffffff;
+    --color-main-green: #74b200;
+    --color-main-gray: #898b94;
+    --color-additional-gray: #eeeeee;
+    --color-form-bg: #130a41;
+    --color-checkbox-select: #261e4e;
+  }
+}
+
+html {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  background-color: var(--color-main-bg);
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.space-y-2 {
+  margin: 0;
+}
