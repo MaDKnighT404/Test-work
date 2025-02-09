@@ -23,7 +23,14 @@ const InputFile = React.forwardRef<HTMLInputElement, React.ComponentProps<"input
         <div className="flex h-full items-center justify-center">
           <img src="./assets/svgs/photo.svg" alt="Добавить фото" className="h-6 w-6" />
         </div>
-        <input multiple type="file" accept="image/*" className="hidden" ref={inputRef} {...props} />
+        <input
+          multiple
+          type="file"
+          accept=".jpg, .jpeg, .png, .webp"
+          className="hidden"
+          ref={inputRef}
+          {...props}
+        />
       </div>
     );
   },

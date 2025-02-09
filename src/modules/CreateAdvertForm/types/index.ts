@@ -33,7 +33,17 @@ export const formSchema = z.object({
   photos: z
     .array(z.instanceof(File))
     .min(1, "Как минимум одно фото обязательно")
-    .max(10, "Максимум 10 фотографий"),
+    .max(10, "Максимум 10 фотографий")
+    .refine(
+      (files) =>
+        files.every((file) => {
+          const pattern = /\.(jpg|jpeg|png|webp)$/i;
+          return pattern.test(file.name);
+        }),
+      {
+        message: "Можно загружать только картинки с расширениями .jpg, .jpeg, .png, .webp",
+      },
+    ),
   city: z.enum(["moscow", "spb", "ekaterinburg", "kazan", "krasnodar"], {
     required_error: "Выберите город",
   }),
