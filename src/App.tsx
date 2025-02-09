@@ -2,7 +2,7 @@ import MainPage from "./Pages/MainPage";
 
 import { Toaster } from "@shared/components/ui/toaster";
 
-const App = () => {
+export const App = () => {
   return (
     <>
       <MainPage />
@@ -10,5 +10,3 @@ const App = () => {
     </>
   );
 };
-
-export default App;
