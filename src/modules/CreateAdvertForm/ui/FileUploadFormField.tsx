@@ -63,6 +63,7 @@ export const FileUploadFormField = <T extends FieldValues>({
                             field.onChange(
                               field.value ? [...field.value, ...filesToAdd] : filesToAdd,
                             );
+                            e.target.value = "";
                           }
                         }}
                         accept={accept}

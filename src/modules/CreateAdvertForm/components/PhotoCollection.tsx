@@ -10,7 +10,7 @@ export const PhotoCollection = ({
   return (
     <>
       {photos?.map((photo, index) => (
-        <div key={index} className="relative flex gap-4">
+        <div key={index} className="relative flex gap-4 rounded-lg bg-main-bg">
           <img
             src={URL.createObjectURL(photo)}
             alt={`Фото ${index + 1}`}
