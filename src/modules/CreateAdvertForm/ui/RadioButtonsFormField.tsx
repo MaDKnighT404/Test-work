@@ -20,7 +20,7 @@ type RadioButtonsFormFieldProps<T extends FieldValues> = {
   name: Path<T>;
   label: string;
   options: RadioOption[];
-  description?: string;
+  description?: React.ReactNode;
   descriptionClassName?: string;
 };
 

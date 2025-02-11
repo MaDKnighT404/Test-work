@@ -31,7 +31,7 @@ export const Parameters = ({ form }: { form: UseFormReturn<FormValues> }) => {
             { value: "new", label: "Новое" },
             { value: "used", label: "Б/У" },
           ]}
-          description="Какую вещь можно считать новой"
+          description={<a href="#">Какую вещь можно считать новой</a>}
           descriptionClassName="underline underline-offset-[2px]"
         />
 

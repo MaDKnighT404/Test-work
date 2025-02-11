@@ -43,7 +43,7 @@ export const FileUploadFormField = <T extends FieldValues>({
               <FormLabel className="xs:pt-[13px]">{label}</FormLabel>
               <div className="flex flex-col">
                 <FormControl>
-                  <div className="mt-3 inline-flex flex-wrap gap-4 xs:mt-0">
+                  <div className="mt-3 inline-flex max-w-[540px] flex-wrap gap-4 xs:mt-0">
                     <PhotoCollection
                       photos={field.value || []}
                       onPhotoRemove={(index) => {
